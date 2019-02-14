@@ -346,3 +346,26 @@ test_cases:
       gt0021|Vascular disease: 0|local::at0029|Absent|
       gt0018|Congestive Heart Failure: 0|local::at0029|Absent|
       
+- id: no_diagnoses_female_under_65_1p
+  input:
+    1:
+      gt0011|Congestive Heart Failure: 0|local::at0029|Absent|
+      gt0012|Hypertension: 0|local::at0029|Absent|
+      gt0013|Stroke/TIA/Thromboembolism: 0|local::at0029|Absent|
+      gt0014|Vascular disease: 0|local::at0029|Absent|
+      gt0015|Diabetes: 0|local::at0029|Absent|
+      gt0036|Event time: 2019-02-07T14:54Z
+      gt0009|Gender: local::at0006|Female|
+      gt0010|Birthdate: 1979-02-07T14:54Z
+      gt0037|Event time: 2019-02-07T14:54Z
+  expected_output:
+    1:
+      gt0022|Diabetes: 0|local::at0029|Absent|
+      gt0016|Gender: 1|local::at0044|Female|
+      gt0023|Total score: 1
+      gt0019|Hypertension: 0|local::at0029|Absent|
+      gt0020|Stroke/TIA/Thromboembolism: 0|local::at0029|Absent|
+      gt0017|Age: 0|local::at0036|Under 65|
+      gt0021|Vascular disease: 0|local::at0029|Absent|
+      gt0018|Congestive Heart Failure: 0|local::at0029|Absent|
+      
